@@ -97,6 +97,16 @@ body::-webkit-scrollbar-thumb {
     margin: 0.5rem auto;
 }
 
+.arrow_back {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    width: 75px;
+    border-radius: 8px;
+    right: 5vw;
+    bottom: 10vh;
+    padding: 5px;
+}
 
 /* |||||||||||||||||||||| CONTENT COLORS |||||||||||||||||||||| */
 .knife::before {
@@ -292,6 +302,11 @@ body::-webkit-scrollbar-thumb {
     z-index: 99;
 }
 
+.arrow_back img {
+    width: 100%;
+    filter: invert(70%);
+}
+
 
 /* |||||||||||||||||||||| INLINE SNAP |||||||||||||||||||||| */
 .inline-snap {
@@ -434,6 +449,11 @@ body::-webkit-scrollbar-thumb {
     .wear {
         font-size: 1.5rem;
     }
+
+    .arrow_back {
+        width: 60px;
+        right: 0.5vw;
+    }
 }
 
 
@@ -466,6 +486,12 @@ body::-webkit-scrollbar-thumb {
         border-radius: 2px;
         transform: translate(200%, -50%) scale(5.25);
     }
+
+    .arrow_back {
+        opacity: 0.75;
+        box-shadow: 0 0 3px #000;
+        bottom: 3vh;
+    }
 }
 
 
@@ -495,5 +521,11 @@ body::-webkit-scrollbar-thumb {
     .skins img:hover,
     .skins img:focus {
         transform: translate(145%, -50%) scale(4);
+    }
+
+    .arrow_back {
+        width: 40px;
+        right: 1vw;
+        opacity: 0.5;
     }
 }
