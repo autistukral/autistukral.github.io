@@ -185,6 +185,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+
+
 /* |||||||||||||||||||||| CONTENT COLORS |||||||||||||||||||||| */
 .unique {
     color: #FFD700;
@@ -334,20 +336,26 @@ body::-webkit-scrollbar-thumb {
     }
 
     .square {
-        min-width: 100px;
-        max-width: 100px;
-        min-height: 100px;
-        max-height: 100px;
+        min-width: 125px;
+        max-width: 125px;
+        min-height: 125px;
+        max-height: 125px;
+    }
+
+    .square .effect {
+        margin-bottom: -12px;
+        text-shadow: 1px 1px 1px #222;
     }
 
     .square p {
         font-size: 1rem;
-        margin-top: -3px;
+        bottom: 20px;
+        text-shadow: 1px 1px 1px #222;
     }
 
     .square img {
         width: 100%;
-        margin-top: -0.75rem;
+        bottom: 8px;
     }
 
     .arrow_back {
@@ -379,6 +387,21 @@ body::-webkit-scrollbar-thumb {
         flex-wrap: wrap;
         gap: 4px;
         padding: 1vh 1vw;
+    }
+
+    .l--hid {
+        flex-wrap: nowrap;
+        height: fit-content;
+        padding: 4vh 1vw;
+    }
+
+    .cosmetics {
+        max-height: 82vh;
+        padding: 1vh 2vw;
+    }
+
+    .square:hover {
+        scale: 1;
     }
 
     .classes--select {
