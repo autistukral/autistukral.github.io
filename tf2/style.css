@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    image-rendering: auto;
+    overflow: hidden;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090909;
+}
+
+
+/* |||||||||||||||||||||| SCROLLBARS |||||||||||||||||||||| */
+.cosmetics::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+.cosmetics::-webkit-scrollbar-track {
+    background: #090909;
+    border-radius: 0;
+    margin: 0;
+}
+
+.cosmetics::-webkit-scrollbar-thumb {
+    background: #2c2c2c;
+    border-radius: 0;
+    border: none;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #131313;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #2c2c2c;
+}
+
+
+/* |||||||||||||||||||||| BACKGROUND COLORS |||||||||||||||||||||| */
+.backColor {
+    background: #343042;
+    transition: background 150ms ease-in-out;
+}
+
+.backColor:hover,
+.backColor:focus {
+    background-color: #252230;
+    transition: background 150ms ease-in-out;
+}
+
+.ObackColor {
+    background: #202020;
+}
+
+/* |||||||||||||||||||||| ANIMATIONS |||||||||||||||||||||| */
+@keyframes slideUp {
+    0% {
+        margin-top: 40vh;
+        opacity: 0;
+    }
+
+    25% {
+        margin-top: 10vh;
+        opacity: 0.2;
+    }
+
+    75% {
+        margin-top: 2vh;
+        opacity: 0.5;
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+
+/* |||||||||||||||||||||| CONTENT |||||||||||||||||||||| */
+#main {
+    max-width: 85vw;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
+    animation: slideUp 350ms;
+    animation-timing-function: linear;
+}
+
+.classes--list {
+    padding: 0 4vw;
+}
+
+.classes--list {
+    display: flex;
+    overflow-x: hidden;
+    height: 330px;
+    gap: 6px;
+}
+
+.classes--select {
+    margin: auto;
+    border-radius: 12px;
+    padding: 8px;
+    scale: 1;
+    transition: scale 200ms ease;
+}
+
+.classes--select:hover {
+    cursor: pointer;
+    scale: 1.25;
+    z-index: 999;
+    box-shadow: 0 0 8px 3px #16141d;
+    transition: scale 200ms ease;
+}
+
+.cosmetics {
+    margin: auto;
+    margin-top: 0;
+    position: relative;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 600px;
+    gap: 6px;
+    padding: 1.5vw 4vw;
+}
+
+.square {
+    line-height: 1.1rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    min-width: 175px;
+    max-width: 175px;
+    min-height: 175px;
+    max-height: 175px;
+    overflow: hidden;
+    scale: 1;
+    transition: scale 150ms ease;
+}
+
+.square:hover {
+    cursor: pointer;
+    scale: 1.25;
+    z-index: 999;
+    box-shadow: 0 0 8px 3px #16141d;
+    transition: scale 150ms ease;
+}
+
+.ObackColor:hover {
+    scale: 1;
+}
+
+
+/* |||||||||||||||||||||| CONTENT COLORS |||||||||||||||||||||| */
+.unique {
+    color: #FFD700;
+}
+
+.vintage {
+    color: #476291;
+}
+
+.genuine {
+    color: #4d7455;
+}
+
+.strange {
+    color: #cf6a32;
+}
+
+.unusual {
+    color: #8650ac;
+}
+
+.collectors {
+    color: #aa0000;
+}
+
+.decorated {
+    color: #fafafa;
+}
+
+.decorated::before {
+    content: '★ ';
+}
+
+.freelanceg {
+    color: #5e98d9;
+}
+
+.mercenaryg {
+    color: #4b69ff;
+}
+
+.commandog {
+    color: #8847ff;
+}
+
+.assasing {
+    color: #d32ce6;
+}
+
+.eliteg {
+    color: #eb4b4b;
+}
+
+/* |||||||||||||||||||||| TEXT |||||||||||||||||||||| */
+.transparentText {
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.spanHolo {
+    background-image: linear-gradient(to right, #00ff22, #ffee00, #ff00f2, #00ebfc);
+    background-size: 100%;
+}
+
+.spanFoil {
+    background-image: linear-gradient(to right, #edeee3, #d4d2bd, #fdf2b0, #e7e5d3);
+    background-size: 100%;
+}
+
+.spanLenticular {
+    background-image: linear-gradient(to right, #ff0000, #ce61e4, #a5a5a5, #8189fd);
+    background-size: 100%;
+}
+
+.spanGold {
+    background-image: linear-gradient(to right, #f3cc4a, #e4b92d, #f1d67b, #f3cc4a);
+    background-size: 100%;
+}
+
+.square a {
+    text-decoration: none;
+}
+
+.square p {
+    font-size: 1.35rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    bottom: 25px;
+}
+
+.square .effect {
+    position: relative;
+    bottom: 34px;
+    margin-bottom: -4px;
+}
+
+/* |||||||||||||||||||||| IMAGES |||||||||||||||||||||| */
+
+.classes--select img {
+    width: 100%;
+}
+
+.square img {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    bottom: 15px;
+}
+
+
+/* |||||||||||||||||||||| INLINE SNAP |||||||||||||||||||||| */
+.inline-snap {
+    scroll-snap-type: inline mandatory;
+}
+
+.inline-snap>* {
+    scroll-snap-align: start;
+}
+
+
+/* ||||||||||||||||||||||| SCALES |||||||||||||||||||||||| */
+
+@media screen and (max-width: 1600px) {}
+
+
+@media screen and (max-width: 1200px) {}
+
+
+@media screen and (max-width: 960px) {
+    .squares::-webkit-scrollbar {
+        height: 12px;
+    }
+
+    .square {
+        min-width: 100px;
+        max-width: 100px;
+        min-height: 100px;
+        max-height: 100px;
+    }
+
+    .square p {
+        font-size: 1rem;
+        margin-top: -3px;
+    }
+
+    .square img {
+        width: 100%;
+        margin-top: -0.75rem;
+    }
+}
+
+
+@media screen and (max-width: 750px) {}
+
+
+@media screen and (max-width: 600px) {}
+
+
+@media screen and (max-width: 420px) {}

@@ -1,0 +1,15 @@
+{
+    "background_color": "#121212",
+    "description": "My wanna have skins list",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "img/icon/apple-touch-icon.png",
+        "sizes": "150x150",
+        "type": "image/png"
+      }
+    ],
+    "name": "Epic Skins",
+    "short_name": "Epic Skins",
+    "start_url": "index.html"
+  }
