@@ -1,15 +1,16 @@
 {
-    "background_color": "#121212",
-    "description": "My wanna have skins list",
-    "display": "fullscreen",
-    "icons": [
-      {
-        "src": "img/icon/apple-touch-icon.png",
-        "sizes": "150x150",
-        "type": "image/png"
-      }
-    ],
-    "name": "Epic Skins",
-    "short_name": "Epic Skins",
-    "start_url": "index.html"
-  }
+  "background_color": "#121212",
+  "theme_color": "#121212",
+  "description": "Webpage of a retard",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "img/icon/apple-touch-icon.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    }
+  ],
+  "name": "Epic Skins",
+  "short_name": "Epic Skins",
+  "start_url": "index.html"
+}
