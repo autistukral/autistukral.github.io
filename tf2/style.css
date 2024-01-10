@@ -386,11 +386,15 @@ body::-webkit-scrollbar-thumb {
     .classes--list {
         display: flex;
         height: 546px;
-        overflow-x: hidden;
+        max-width:
+            overflow-x: hidden;
         overflow-y: hidden;
         flex-wrap: wrap;
         gap: 4px;
         padding: 1vh 1vw;
+        margin: auto;
+        justify-content: space-around;
+        align-content: space-around;
     }
 
     .l--hid {
@@ -410,6 +414,7 @@ body::-webkit-scrollbar-thumb {
 
     .classes--select {
         max-width: 110px;
+        margin: 0;
     }
 
     .classes--select:hover {
@@ -417,8 +422,9 @@ body::-webkit-scrollbar-thumb {
     }
 
     .arrow_back {
-        width: 40px;
-        right: 1vw;
+        width: 45px;
+        right: 1.5vw;
+        bottom: 8vh;
         opacity: 0.5;
     }
 }

@@ -524,8 +524,9 @@ body::-webkit-scrollbar-thumb {
     }
 
     .arrow_back {
-        width: 40px;
-        right: 1vw;
+        width: 45px;
+        right: 1.5vw;
+        bottom: 8vh;
         opacity: 0.5;
     }
 }
