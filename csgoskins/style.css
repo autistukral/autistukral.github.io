@@ -108,6 +108,10 @@ body::-webkit-scrollbar-thumb {
     padding: 5px;
 }
 
+.arrow_top {
+    bottom: 19vh;
+}
+
 /* |||||||||||||||||||||| CONTENT COLORS |||||||||||||||||||||| */
 .knife::before {
     content: '★';
@@ -307,6 +311,10 @@ body::-webkit-scrollbar-thumb {
     filter: invert(70%);
 }
 
+.arrow_top img {
+    rotate: 90deg;
+}
+
 
 /* |||||||||||||||||||||| INLINE SNAP |||||||||||||||||||||| */
 .inline-snap {
@@ -454,6 +462,10 @@ body::-webkit-scrollbar-thumb {
         width: 60px;
         right: 0.5vw;
     }
+
+    .arrow_top {
+        bottom: 17.2vh;
+    }
 }
 
 
@@ -492,6 +504,10 @@ body::-webkit-scrollbar-thumb {
         box-shadow: 0 0 3px #000;
         bottom: 3vh;
     }
+
+    .arrow_top {
+        bottom: 10.1vh;
+    }
 }
 
 
@@ -528,5 +544,9 @@ body::-webkit-scrollbar-thumb {
         right: 1.5vw;
         bottom: 8vh;
         opacity: 0.5;
+    }
+
+    .arrow_top {
+        bottom: 13.5vh;
     }
 }
