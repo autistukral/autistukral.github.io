@@ -133,6 +133,7 @@ body::-webkit-scrollbar-thumb {
 
 .square .remarkable,
 .restricted,
+.exceptional,
 .knife {
     color: #8847ff;
 }
