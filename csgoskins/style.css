@@ -426,8 +426,6 @@ body::-webkit-scrollbar-thumb {
         font-size: 1.5rem;
     }
 
-    .skins img {}
-
     .wear {
         font-size: 1.5rem;
     }
@@ -500,7 +498,11 @@ body::-webkit-scrollbar-thumb {
     .skins {
         grid-template-columns: 0.7fr 2fr 0.9fr 0.4fr;
         min-height: 5rem;
-        max-height: 5rem;
+    }
+
+    .img_normal {
+        max-width: 9rem;
+        padding: 8px;
     }
 
     .arrow_back {
