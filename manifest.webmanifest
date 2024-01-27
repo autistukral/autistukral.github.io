@@ -5,8 +5,8 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "csgoskins/img/icon/apple-touch-icon.png",
-      "sizes": "150x150",
+      "src": "csgoskins/img/icon/icon532.png",
+      "sizes": "532x532",
       "type": "image/png"
     }
   ],
