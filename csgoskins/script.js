@@ -79,12 +79,10 @@ document.querySelectorAll('.skins_img').forEach(imgButton => imgButton.addEventL
         disableScroll();
         imgButton.onload(setTimeout(() => {
             loaded();
-        }, 200));
+        }, 150));
     } else {
         imgButton.classList.replace('img_zoomed', 'img_normal');
         enableScroll();
         imgButton.src = imgButton.src.replace('high_', 'low_');
     }
 }))
-
-// loading disable scroll

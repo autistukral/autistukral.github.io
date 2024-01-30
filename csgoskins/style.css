@@ -34,7 +34,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--items-bg);
+    background: var(--img-bg);
     z-index: 999;
     transition: opacity 200ms, visibility 250ms;
 }

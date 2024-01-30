@@ -1,3 +1,12 @@
+/* ||||||||||||||||||||| VARS ||||||||||||||||||| */
+:root {
+    --img-bg: #1f1c27;
+    --items-bg: #343042;
+    --main-bg: #090909;
+    --hover-item-bg: #252230;
+}
+
+/* ||||||||||||||||||||| BASICS ||||||||||||||||||| */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,6 +23,46 @@ html {
     font-size: 62.5%;
     font-family: Arial, Helvetica, sans-serif;
     background: #090909;
+}
+
+/* ||||||||||||||||||||| LOADER ||||||||||||||||||| */
+.load {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--img-bg);
+    z-index: 999;
+    transition: opacity 200ms, visibility 250ms;
+}
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms, visibility 350ms;
+}
+
+.load::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--hover-item-bg);
+    border-top-color: #8c7fa1;
+    border-radius: 100vh;
+    animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn)
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
 }
 
 
@@ -129,7 +178,7 @@ body::-webkit-scrollbar-thumb {
 .classes--select:hover {
     cursor: pointer;
     scale: 1.25;
-    z-index: 999;
+    z-index: 10;
     box-shadow: 0 0 8px 3px #16141d;
     transition: scale 200ms ease;
 }
@@ -164,7 +213,7 @@ body::-webkit-scrollbar-thumb {
 .square:hover {
     cursor: pointer;
     scale: 1.25;
-    z-index: 999;
+    z-index: 10;
     box-shadow: 0 0 8px 3px #16141d;
     transition: scale 150ms ease;
 }
@@ -176,7 +225,7 @@ body::-webkit-scrollbar-thumb {
 .arrow_back {
     display: flex;
     position: fixed;
-    z-index: 999;
+    z-index: 11;
     width: 75px;
     border-radius: 8px;
     right: 5vw;

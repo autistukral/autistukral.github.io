@@ -1,3 +1,20 @@
+// load variable
+const loader = document.querySelector('.load');
+
+// load functions
+function load() {
+    loader.classList.remove('loaded');
+}
+
+function loaded() {
+    loader.classList.add('loaded');
+}
+
+// page load
+window.addEventListener('DOMContentLoaded', () => {
+    loaded();
+});
+
 const scout = document.querySelector('.c--scout');
 const soldier = document.querySelector('.c--soldier');
 const pyro = document.querySelector('.c--pyro');
