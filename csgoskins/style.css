@@ -3,7 +3,10 @@
     --img-bg: #1f1c27;
     --items-bg: #343042;
     --main-bg: #090909;
+    --hover-item-bg: #252230;
 }
+
+/* ||||||||||||||||||||| BASICS ||||||||||||||||||| */
 
 * {
     box-sizing: border-box;
@@ -22,6 +25,45 @@ html {
     background: var(--main-bg);
 }
 
+/* ||||||||||||||||||||| LOADER ||||||||||||||||||| */
+.load {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--items-bg);
+    z-index: 999;
+    transition: opacity 200ms, visibility 250ms;
+}
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms, visibility 350ms;
+}
+
+.load::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--hover-item-bg);
+    border-top-color: #8c7fa1;
+    border-radius: 100vh;
+    animation: loading 1s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn)
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
 
 /* |||||||||||||||||||||| SCROLLBARS |||||||||||||||||||||| */
 .squares::-webkit-scrollbar {
@@ -100,7 +142,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     position: fixed;
     flex-direction: column;
-    z-index: 999;
+    z-index: 10;
     width: auto;
     border-radius: 8px;
     right: 10vw;
@@ -307,7 +349,7 @@ body::-webkit-scrollbar-thumb {
     background: var(--img-bg);
     border-radius: 0;
     padding: 100svh 10vw;
-    z-index: 99999;
+    z-index: 11;
     width: 100vw;
     position: fixed;
     left: 0;
@@ -536,7 +578,7 @@ body::-webkit-scrollbar-thumb {
 
     .backColor:hover,
     .backColor:focus {
-        background-color: #252230;
+        background-color: var(--hover-item-bg);
         transition: background 150ms ease-in-out;
     }
 

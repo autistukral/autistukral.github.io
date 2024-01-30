@@ -1,3 +1,20 @@
+// load variable
+const loader = document.querySelector('.load');
+
+// load functions
+function load() {
+    loader.classList.remove('loaded');
+}
+
+function loaded() {
+    loader.classList.add('loaded');
+}
+
+// page load
+window.addEventListener('DOMContentLoaded', () => {
+    loaded();
+});
+
 // temporary ownage button toggle function
 document.querySelectorAll('.ownBtn').forEach(ownButton => ownButton.addEventListener('click', () => {
     if (ownButton.classList.contains('deown')) {
@@ -54,12 +71,16 @@ function enableScroll() {
 
 document.querySelectorAll('.skins_img').forEach(imgButton => imgButton.addEventListener('click', () => {
     if (imgButton.classList.contains('img_normal')) {
+        load();
         imgButton.classList.replace('img_normal', 'img_zoomed');
         disableScroll();
         imgButton.src = imgButton.src.replace('low_', 'high_');
+        imgButton.onload(loaded());
     } else {
         imgButton.classList.replace('img_zoomed', 'img_normal');
         enableScroll();
         imgButton.src = imgButton.src.replace('high_', 'low_');
     }
 }))
+
+// loading disable scroll
