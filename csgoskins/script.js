@@ -72,10 +72,14 @@ function enableScroll() {
 document.querySelectorAll('.skins_img').forEach(imgButton => imgButton.addEventListener('click', () => {
     if (imgButton.classList.contains('img_normal')) {
         load();
-        imgButton.classList.replace('img_normal', 'img_zoomed');
+        setTimeout(() => {
+            imgButton.classList.replace('img_normal', 'img_zoomed');
+            imgButton.src = imgButton.src.replace('low_', 'high_');
+        }, 150);
         disableScroll();
-        imgButton.src = imgButton.src.replace('low_', 'high_');
-        imgButton.onload(loaded());
+        imgButton.onload(setTimeout(() => {
+            loaded();
+        }, 200));
     } else {
         imgButton.classList.replace('img_zoomed', 'img_normal');
         enableScroll();
