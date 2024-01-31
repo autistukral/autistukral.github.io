@@ -95,6 +95,7 @@ var scrolling = false;
 var targetDivs = document.querySelectorAll('.sections');
 
 window.addEventListener('scroll', function () {
+
     if (!scrolling) {
 
         scrolling = true;
@@ -131,7 +132,7 @@ function scrollToNextDiv(event) {
 
         setTimeout(function () {
             scrolling = false;
-        }, 50);
+        }, 5);
 
     }
 
