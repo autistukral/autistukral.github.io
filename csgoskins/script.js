@@ -86,3 +86,53 @@ document.querySelectorAll('.skins_img').forEach(imgButton => imgButton.addEventL
         imgButton.src = imgButton.src.replace('high_', 'low_');
     }
 }))
+
+// next section arrow
+var currentTargetIndex = 0;
+
+var scrolling = false;
+
+var targetDivs = document.querySelectorAll('.sections');
+
+window.addEventListener('scroll', function () {
+    if (!scrolling) {
+
+        scrolling = true;
+
+        var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        targetDivs.forEach(function (targetDiv, index) {
+            var rect = targetDiv.getBoundingClientRect();
+
+            if (rect.top <= viewportHeight / 2 && rect.bottom >= viewportHeight / 2) {
+                currentTargetIndex = index;
+            }
+        });
+
+        setTimeout(function () {
+            scrolling = false;
+        }, 50);
+    }
+});
+
+function scrollToNextDiv(event) {
+
+    event.preventDefault();
+
+    if (window.scrollY === 0) {
+        currentTargetIndex = 0;
+    }
+
+    if (currentTargetIndex < targetDivs.length - 1 && !scrolling) {
+
+        currentTargetIndex++;
+
+        targetDivs[currentTargetIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        setTimeout(function () {
+            scrolling = false;
+        }, 50);
+
+    }
+
+}
