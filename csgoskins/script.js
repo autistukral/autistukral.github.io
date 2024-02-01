@@ -122,7 +122,7 @@ function scrollToNextDiv(event) {
 
     if (window.scrollY === 0) {
         currentTargetIndex = 0;
-    }
+    };
 
     if (currentTargetIndex < targetDivs.length - 1 && !scrolling) {
 
@@ -134,8 +134,49 @@ function scrollToNextDiv(event) {
             scrolling = false;
         }, 5);
 
-    }
+    };
 
+};
+
+function scrollToPrevDiv(event) {
+
+    event.preventDefault();
+
+    if (window.scrollY === 0) {
+        currentTargetIndex = 0;
+    };
+
+    if (currentTargetIndex < targetDivs.length - 1 && !scrolling) {
+
+        currentTargetIndex--;
+
+        targetDivs[currentTargetIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        setTimeout(function () {
+            scrolling = false;
+        }, 5);
+
+    };
+
+};
+
+var scrollTimeout;
+
+function startScrolling(direction) {
+    var scrollHeight = (direction === 'down') ? document.body.scrollHeight : 0;
+
+    scrollTimeout = setTimeout(function () {
+        window.scrollTo({
+            top: scrollHeight,
+            behavior: 'smooth'
+        });
+    }, 250); // Set the delay in milliseconds
+};
+
+function stopScrolling() {
+    clearTimeout(scrollTimeout);
 }
+
+document.addEventListener('mouseup', stopScrolling);
 
 // drag and scroll

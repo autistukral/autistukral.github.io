@@ -2061,7 +2061,8 @@
         <div class="arrow_back">
 
             <div class="arrow_top backColor">
-                <a href="#top" aria-label="Go to top of the page">
+                <a href="#" onclick="scrollToPrevDiv(event)" onmousedown="startScrolling('up')"
+                    aria-label="Go one section up">
                     <img src="img/svg/arrow-back-simple-svgrepo-com.svg" alt="" style="rotate: 90deg;">
                 </a>
             </div>
@@ -2073,7 +2074,8 @@
             </div>
 
             <div class="arrow_top arrow_down backColor">
-                <a href="#" onclick="scrollToNextDiv(event)">
+                <a href="#" onclick="scrollToNextDiv(event)" onmousedown="startScrolling('down')"
+                    aria-label="Go one section down">
                     <img src="img/svg/arrow-back-simple-svgrepo-com.svg" alt="" style="rotate: 270deg;">
                 </a>
             </div>
