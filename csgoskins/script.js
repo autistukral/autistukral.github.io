@@ -148,7 +148,11 @@ function scrollToPrevDiv(event) {
 
     if (currentTargetIndex < targetDivs.length - 1 && !scrolling) {
 
-        currentTargetIndex--;
+        if (currentTargetIndex <= 0) {
+            currentTargetIndex = 0;
+        } else {
+            currentTargetIndex--;
+        }
 
         targetDivs[currentTargetIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
 
