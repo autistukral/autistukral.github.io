@@ -137,3 +137,5 @@ function scrollToNextDiv(event) {
     }
 
 }
+
+// drag and scroll
