@@ -128,7 +128,7 @@ function scrollToNextDiv(event) {
 
         currentTargetIndex++;
 
-        targetDivs[currentTargetIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+        targetDivs[currentTargetIndex].scrollIntoView({ behavior: 'auto', block: 'center' });
 
         setTimeout(function () {
             scrolling = false;
@@ -154,14 +154,14 @@ function scrollToPrevDiv(event) {
             currentTargetIndex--;
         }
 
-        if (currentTargetIndex === 0) {
+        if (currentTargetIndex < 1) {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth'
+                behavior: 'auto'
             });
+        } else {
+            targetDivs[currentTargetIndex].scrollIntoView({ behavior: 'auto', block: 'center' });
         }
-
-        targetDivs[currentTargetIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
 
         setTimeout(function () {
             scrolling = false;
@@ -179,7 +179,7 @@ function startScrolling(direction) {
     scrollTimeout = setTimeout(function () {
         window.scrollTo({
             top: scrollHeight,
-            behavior: 'smooth'
+            behavior: 'auto'
         });
     }, 250); // Set the delay in milliseconds
 };
