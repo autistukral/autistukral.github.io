@@ -154,6 +154,13 @@ function scrollToPrevDiv(event) {
             currentTargetIndex--;
         }
 
+        if (currentTargetIndex === 0) {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
         targetDivs[currentTargetIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
 
         setTimeout(function () {
