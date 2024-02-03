@@ -431,7 +431,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     .arrow_back {
-        right: 7.5vw;
+        right: 0.25vw;
     }
 }
 
