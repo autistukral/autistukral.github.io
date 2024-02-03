@@ -68,7 +68,7 @@ html {
 
 /* |||||||||||||||||||||| SCROLLBARS |||||||||||||||||||||| */
 .squares::-webkit-scrollbar {
-    height: 12px;
+    height: 10px;
 }
 
 .squares::-webkit-scrollbar-track {
@@ -78,7 +78,7 @@ html {
 }
 
 .squares::-webkit-scrollbar-thumb {
-    background: #2c2c2c;
+    background: #767286;
     border-radius: 7680px;
     border: 2px solid var(--main-bg);
 }
