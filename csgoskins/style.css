@@ -395,6 +395,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 1600px) {
+    #main {
+        max-width: 80vw;
+    }
+
     .skins {
         grid-template-columns: 0.7fr 2fr 0.65fr 0.2fr;
     }
@@ -405,6 +409,10 @@ body::-webkit-scrollbar-thumb {
 
     .wear {
         font-size: 2rem;
+    }
+
+    .arrow_back {
+        right: 2vw;
     }
 }
 
