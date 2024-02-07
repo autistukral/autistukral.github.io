@@ -193,7 +193,8 @@ body::-webkit-scrollbar-thumb {
 
 .square .extraordinary,
 .square .master,
-.covert {
+.covert,
+.lenticular {
     color: #eb4b4b;
 }
 
