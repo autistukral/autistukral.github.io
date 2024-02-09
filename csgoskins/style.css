@@ -197,9 +197,11 @@ body::-webkit-scrollbar-thumb {
 
 .rmenu_show {
     display: flex;
+    gap: 1px;
+    flex-direction: column;
     position: absolute;
     background: var(--hover-item-bg);
-    padding: 8px;
+    padding: 4px;
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
@@ -214,6 +216,8 @@ body::-webkit-scrollbar-thumb {
     text-decoration: none;
     color: var(--dmarket);
     width: 100%;
+    border-radius: 4px;
+    padding: 6px;
 }
 
 /* |||||||||||||||||||||| CONTENT COLORS |||||||||||||||||||||| */
@@ -253,6 +257,18 @@ body::-webkit-scrollbar-thumb {
 
 .consumerGrade {
     color: #b0c3d9;
+}
+
+.dmarket {
+    color: #8dd294;
+}
+
+.skinbaron {
+    color: #ddd;
+}
+
+.bitskins {
+    color: #da2525;
 }
 
 
@@ -661,7 +677,7 @@ body::-webkit-scrollbar-thumb {
         cursor: zoom-out;
     }
 
-    .rmenu_show:hover {
+    .rmenu_show *:hover {
         background: var(--img-bg);
     }
 
