@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandwidth</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        .main,
+        .former,
+        .form,
+        .shell,
+        .frst,
+        .lbl {
+            display: flex;
+        }
+
+        body {
+            font-size: 10px;
+            height: 100vh;
+            background-color: #1e2036;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .former {
+            column-gap: 25px;
+        }
+
+        .form {
+            flex-direction: column;
+            width: 300px;
+            align-items: center;
+            row-gap: 8px;
+        }
+
+        .shell {
+            width: 300px;
+        }
+
+        .frst {
+            width: 230px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .lbl {
+            width: 70px;
+            font-size: 16px;
+            justify-content: start;
+            padding-left: 10px;
+            align-items: center;
+        }
+
+        label {
+            font-size: 20px;
+            text-align: right;
+            width: 95px;
+        }
+
+        input[type=number] {
+            width: 125px;
+            font-size: 20px;
+            outline: none;
+            border: none;
+            border-radius: 6px;
+            padding: 4px;
+            text-align: center;
+            background-color: #424369;
+            color: #fff;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            appearance: none;
+        }
+
+        select {
+            width: 125px;
+            font-size: 20px;
+            outline: none;
+            border: none;
+            border-radius: 6px;
+            padding: 4px;
+            text-align: center;
+            background-color: #424369;
+            color: #fff;
+        }
+
+        option {}
+
+        button {
+            cursor: pointer;
+            margin-top: 15px;
+            width: 175px;
+            font-size: 20px;
+            height: 42px;
+            border: none;
+            border-radius: 6px;
+            background-image: linear-gradient(45deg, #1a97eb, #e903d6, #1a97eb);
+            background-size: 200%;
+            background-position: left;
+            color: #fff;
+            scale: 1;
+            transition: all 150ms ease;
+        }
+
+        button:hover {
+            scale: 1.1;
+            background-position: right;
+            transition: all 250ms ease;
+        }
+
+        .answer {
+            margin-top: 15px;
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .answer2 {
+            margin-top: 0px;
+        }
+
+        .answer3 {
+            margin-top: -20px;
+        }
+
+        .answer4 {
+            margin-top: 5px;
+        }
+
+        .answerText {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1a97eb;
+        }
+
+        .answer2 .answerText,
+        .answer3 .answerText {
+            font-size: 24px;
+            color: #e903d6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="former">
+            <div class="form">
+                <div class="shell">
+                    <div class="frst">
+                        <label for="">Width</label>
+                        <input type="number" name="width" id="width">
+                    </div>
+                    <div class="lbl">
+                        pixels
+                    </div>
+                </div>
+                <div class="shell">
+                    <div class="frst">
+                        <label for="">Height</label>
+                        <input type="number" name="height" id="height">
+                    </div>
+                    <div class="lbl">
+                        pixels
+                    </div>
+                </div>
+                <div class="shell">
+                    <div class="frst">
+                        <label for="">Refresh</label>
+                        <input type="number" name="refresh" id="refresh">
+                    </div>
+                    <div class="lbl">
+                        Hz
+                    </div>
+                </div>
+                <div class="shell">
+                    <div class="frst">
+                        <label for="">Bit depth</label>
+                        <select name="bitdepth" id="bitdepth">
+                            <option value="24">8</option>
+                            <option value="30">10</option>
+                            <option value="36">12</option>
+                        </select>
+                    </div>
+                    <div class="lbl">
+                        bits
+                    </div>
+                </div>
+                <div class="answer">
+                    <p class="answerText" id="resultId"></p>
+                </div>
+                <div class="answer answer2">
+                    <p class="answerText" id="DPid"></p>
+                </div>
+                <div class="answer answer2 answer3">
+                    <p class="answerText" id="HDMIid"></p>
+                </div>
+                <div class="answer answer4">
+                    <p class="answerText" id="DSC"></p>
+                </div>
+            </div>
+            <div class="form">
+                <div class="shell">
+                    <div class="frst">
+                        <label for="">Width</label>
+                        <input type="number" name="width" id="width2">
+                    </div>
+                    <div class="lbl">
+                        pixels
+                    </div>
+                </div>
+                <div class="shell">
+                    <div class="frst">
+                        <label for="">Height</label>
+                        <input type="number" name="height" id="height2">
+                    </div>
+                    <div class="lbl">
+                        pixels
+                    </div>
+                </div>
+                <div class="shell">
+                    <div class="frst">
+                        <label for="">Refresh</label>
+                        <input type="number" name="refresh" id="refresh2">
+                    </div>
+                    <div class="lbl">
+                        Hz
+                    </div>
+                </div>
+                <div class="shell">
+                    <div class="frst">
+                        <label for="">Bit depth</label>
+                        <select name="bitdepth" id="bitdepth2">
+                            <option value="24">8</option>
+                            <option value="30">10</option>
+                            <option value="36">12</option>
+                        </select>
+                    </div>
+                    <div class="lbl">
+                        bits
+                    </div>
+                </div>
+                <div class="answer">
+                    <p class="answerText" id="resultId2"></p>
+                </div>
+                <div class="answer answer2">
+                    <p class="answerText" id="DPid2"></p>
+                </div>
+                <div class="answer answer3">
+                    <p class="answerText" id="HDMIid2"></p>
+                </div>
+                <div class="answer answer4">
+                    <p class="answerText" id="DSC2"></p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button onclick="calculateB()" type="button">Bandwidth</button>
+        </div>
+    </div>
+    <script>
+        function calculateB() {
+            let H = parseFloat(document.getElementById('width').value);
+            let H2 = parseFloat(document.getElementById('width2').value);
+            let V = parseFloat(document.getElementById('height').value);
+            let V2 = parseFloat(document.getElementById('height2').value);
+            let refreshrate = parseFloat(document.getElementById('refresh').value);
+            let refreshrate2 = parseFloat(document.getElementById('refresh2').value);
+            let bitdepth = parseFloat(document.getElementById('bitdepth').value);
+            let bitdepth2 = parseFloat(document.getElementById('bitdepth2').value);
+            let vmin = 0.00046;
+            let hblank = 80;
+            let vblank = Math.ceil((V * vmin) / ((1 / refreshrate) - vmin));
+            let vblank2 = Math.ceil((V2 * vmin) / ((1 / refreshrate2) - vmin));
+            let H_eff = H + hblank;
+            let H_eff2 = H2 + hblank;
+            let V_eff = V + vblank;
+            let V_eff2 = V2 + vblank2;
+
+            let frame_size = H_eff * V_eff;
+            let frame_size2 = H_eff2 * V_eff2;
+            let pixRate = frame_size * refreshrate;
+            let pixRate2 = frame_size2 * refreshrate2;
+            let dataRate = (pixRate * bitdepth);
+            let dataRate2 = (pixRate2 * bitdepth2);
+            let result = (dataRate / 1000000000).toFixed(2);
+            let result2 = (dataRate2 / 1000000000).toFixed(2);
+
+            let dp12 = 'DP 1.2';
+            let dp14 = 'DP 1.4';
+            let uhbr10 = 'DP 2.0 - UHBR 10';
+            let uhbr135 = 'DP 2.0 - UHBR 13.5';
+            let uhbr20 = 'DP 2.0 - UHBR 20';
+
+            let hmdi14 = 'HDMI 1.4';
+            let hdmi20 = 'HDMI 2.0';
+            let hdmi21 = 'HDMI 2.1';
+
+            let upsDP = 'no?';
+            let upsHDMI = 'no?';
+
+            if (result > 0) {
+                document.getElementById('resultId').innerText = `${result} Gbps`;
+            } else {
+                document.getElementById('resultId').innerText = "";
+            }
+            if (result2 > 0) {
+                document.getElementById('resultId2').innerText = `${result2} Gbps`;
+            } else {
+                document.getElementById('resultId2').innerText = "";
+            }
+
+            if ((result <= 0) || (result > 77.37)) {
+                document.getElementById('DPid').innerText = upsDP;
+            }
+            if ((result2 <= 0) || (result2 > 77.37)) {
+                document.getElementById('DPid2').innerText = upsDP;
+            }
+            if ((result > 0) && (result <= 17.28)) {
+                document.getElementById('DPid').innerText = dp12;
+            }
+            if ((result2 > 0) && (result2 <= 17.28)) {
+                document.getElementById('DPid2').innerText = dp12;
+            }
+            if ((result > 17.28) && (result <= 25.92)) {
+                document.getElementById('DPid').innerText = dp14;
+            }
+            if ((result2 > 17.28) && (result2 <= 25.92)) {
+                document.getElementById('DPid2').innerText = dp14;
+            }
+            if ((result > 25.92) && (result <= 38.69)) {
+                document.getElementById('DPid').innerText = uhbr10;
+            }
+            if ((result2 > 25.92) && (result2 <= 38.69)) {
+                document.getElementById('DPid2').innerText = uhbr10;
+            }
+            if ((result > 38.69) && (result <= 52.22)) {
+                document.getElementById('DPid').innerText = uhbr135;
+            }
+            if ((result2 > 38.69) && (result2 <= 52.22)) {
+                document.getElementById('DPid2').innerText = uhbr135;
+            }
+            if ((result > 52.22) && (result <= 77.37)) {
+                document.getElementById('DPid').innerText = uhbr20;
+            }
+            if ((result2 > 52.22) && (result2 <= 77.37)) {
+                document.getElementById('DPid2').innerText = uhbr20;
+            }
+
+
+            if ((result <= 0) || (result > 41.92)) {
+                document.getElementById('HDMIid').innerText = upsHDMI;
+            }
+            if ((result2 <= 0) || (result2 > 41.92)) {
+                document.getElementById('HDMIid2').innerText = upsHDMI;
+            }
+            if ((result > 0) && (result <= 8.16)) {
+                document.getElementById('HDMIid').innerText = hmdi14;
+            }
+            if ((result2 > 0) && (result2 <= 8.16)) {
+                document.getElementById('HDMIid2').innerText = hmdi14;
+            }
+            if ((result > 8.16) && (result <= 14.4)) {
+                document.getElementById('HDMIid').innerText = hdmi20;
+            }
+            if ((result2 > 8.16) && (result2 <= 14.4)) {
+                document.getElementById('HDMIid2').innerText = hdmi20;
+            }
+            if ((result > 14.4) && (result <= 41.92)) {
+                document.getElementById('HDMIid').innerText = hdmi21;
+            }
+            if ((result2 > 14.4) && (result2 <= 41.92)) {
+                document.getElementById('HDMIid2').innerText = hdmi21;
+            }
+
+
+            if (bitdepth == 24 && result > 0) {
+                document.getElementById('DSC').innerText = `DSC: ${((dataRate / 1000000000) / 3).toFixed(2)} Gbps`;
+            }
+            if (bitdepth == 30 && result > 0) {
+                document.getElementById('DSC').innerText = `DSC: ${((dataRate / 1000000000) / 3.75).toFixed(2)} Gbps`;
+            }
+            if (bitdepth == 36 && result > 0) {
+                document.getElementById('DSC').innerText = `DSC: ${((dataRate / 1000000000) / 4.5).toFixed(2)} Gbps`;
+            }
+            if (bitdepth2 == 24 && result2 > 0) {
+                document.getElementById('DSC2').innerText = `DSC: ${((dataRate2 / 1000000000) / 3).toFixed(2)} Gbps`;
+            }
+            if (bitdepth2 == 30 && result2 > 0) {
+                document.getElementById('DSC2').innerText = `DSC: ${((dataRate2 / 1000000000) / 3.75).toFixed(2)} Gbps`;
+            }
+            if (bitdepth2 == 36 && result2 > 0) {
+                document.getElementById('DSC2').innerText = `DSC: ${((dataRate2 / 1000000000) / 4.5).toFixed(2)} Gbps`;
+            }
+        }
+    </script>
+</body>
+
+</html>
