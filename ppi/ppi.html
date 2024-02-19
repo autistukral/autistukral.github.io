@@ -110,12 +110,6 @@
             transition: all 150ms ease;
         }
 
-        button:hover {
-            scale: 1.1;
-            background-position: right;
-            transition: all 250ms ease;
-        }
-
         .answer {
             margin-top: 25px;
             width: 200px;
@@ -170,12 +164,39 @@
             -webkit-touch-callout: none;
         }
 
+        @media screen and (max-width: 450px) {
+
+            .former {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .arrow_back {
+                bottom: 8vh;
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                right: 0;
+            }
+
+            .arrow_top {
+                width: 45px;
+                opacity: 0.5;
+            }
+        }
+
         @media (hover: hover) {
 
             .backColor:hover,
             .backColor:focus {
                 background-color: #252230;
                 transition: background 150ms ease-in-out;
+            }
+
+            button:hover {
+                scale: 1.1;
+                background-position: right;
+                transition: all 250ms ease;
             }
         }
     </style>

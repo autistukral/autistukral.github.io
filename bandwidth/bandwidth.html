@@ -32,6 +32,11 @@
             justify-content: center;
         }
 
+        .backColor {
+            background: #343042;
+            transition: background 150ms ease-in-out;
+        }
+
         .main {
             flex-direction: column;
             align-items: center;
@@ -119,12 +124,6 @@
             transition: all 150ms ease;
         }
 
-        button:hover {
-            scale: 1.1;
-            background-position: right;
-            transition: all 250ms ease;
-        }
-
         .answer {
             margin-top: 15px;
             width: 300px;
@@ -157,6 +156,68 @@
         .answer3 .answerText {
             font-size: 24px;
             color: #e903d6;
+        }
+
+        .arrow_back img {
+            width: 100%;
+            filter: invert(70%);
+        }
+
+        .arrow_back {
+            display: flex;
+            position: fixed;
+            flex-direction: column;
+            z-index: 10;
+            width: auto;
+            border-radius: 8px;
+            right: 10vw;
+            bottom: 10vh;
+            padding: 5px;
+            gap: 4px;
+        }
+
+        .arrow_top {
+            opacity: 0.75;
+            box-shadow: 0 0 3px #000;
+            width: 80px;
+            border-radius: 8px;
+            -webkit-touch-callout: none;
+        }
+
+        @media screen and (max-width: 450px) {
+
+            .former {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .arrow_back {
+                bottom: 8vh;
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                right: 0;
+            }
+
+            .arrow_top {
+                width: 45px;
+                opacity: 0.5;
+            }
+        }
+
+        @media (hover: hover) {
+
+            .backColor:hover,
+            .backColor:focus {
+                background-color: #252230;
+                transition: background 150ms ease-in-out;
+            }
+
+            button:hover {
+                scale: 1.1;
+                background-position: right;
+                transition: all 250ms ease;
+            }
         }
     </style>
 </head>
@@ -277,6 +338,17 @@
             <button onclick="calculateB()" type="button">Bandwidth</button>
         </div>
     </div>
+
+    <div class="arrow_back">
+
+        <div class="arrow_top backColor">
+            <a href="../index.html" aria-label="Go to the main page">
+                <img src="/csgoskins/img/svg/arrow-back-simple-svgrepo-com.svg" alt="">
+            </a>
+        </div>
+
+    </div>
+
     <script>
         function calculateB() {
             let H = parseFloat(document.getElementById('width').value);
