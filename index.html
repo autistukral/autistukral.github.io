@@ -18,13 +18,22 @@
             justify-content: center;
             align-items: center;
         }
+
+        .squares {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .bw--img {
+            filter: invert(90%);
+        }
     </style>
 </head>
 
 <body>
     <div class="load"></div>
     <div id="main">
-        <div class="squares inline-snap">
+        <div class="squares">
 
             <div class="square backColor" style="max-width: 150px; min-height: 150px;">
                 <a href="/csgoskins/index.html">
@@ -36,6 +45,20 @@
             <div class="square backColor" style="max-width: 150px; min-height: 150px;">
                 <a href="/tf2/index.html">
                     <img src="tf2/img/icon/icon2.png" alt="" style="width: 100%; padding: 8px; margin: 0">
+                </a>
+            </div>
+
+            <div class="square backColor" style="max-width: 150px; min-height: 150px;">
+                <a href="/ppi/ppi.html">
+                    <img class="bw--img" src="ppi/img/icon/dpi-Dotsperinch-resolution-512.webp" alt=""
+                        style="width: 100%; padding: 8px; margin: 0">
+                </a>
+            </div>
+
+            <div class="square backColor" style="max-width: 150px; min-height: 150px;">
+                <a href="/bandwidth/bandwidth.html">
+                    <img src="bandwidth/img/icon/DisplayPort-2-512.webp" alt=""
+                        style="width: 100%; padding: 8px; margin: 0">
                 </a>
             </div>
 
