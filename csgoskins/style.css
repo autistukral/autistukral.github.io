@@ -17,9 +17,7 @@
     scroll-behavior: smooth;
 }
 
-body {
-    image-rendering: auto;
-}
+body {}
 
 html {
     font-size: 62.5%;
@@ -393,8 +391,8 @@ body::-webkit-scrollbar-thumb {
     margin: 0.5rem auto 0 auto;
 }
 
-.agents img,
-.sticker img {
+.agents a img,
+.sticker a img {
     image-rendering: pixelated;
 }
 
