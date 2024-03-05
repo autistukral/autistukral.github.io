@@ -393,7 +393,7 @@ body::-webkit-scrollbar-thumb {
 .agents img,
 .sticker img,
 .pass img {
-    image-rendering: auto;
+    image-rendering: pixelated;
 }
 
 .musicKit img {
