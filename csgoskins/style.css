@@ -391,7 +391,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .agents img,
-.sticker img {
+.sticker img,
+.pass img {
     image-rendering: pixelated;
 }
 
