@@ -393,6 +393,11 @@ body::-webkit-scrollbar-thumb {
     margin: 0.5rem auto 0 auto;
 }
 
+.agents img,
+.sticker img {
+    image-rendering: pixelated;
+}
+
 .musicKit img {
     width: 90%;
     margin: auto;
