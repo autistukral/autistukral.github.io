@@ -94,7 +94,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-/* |||||||||||||||||||||| BACKGROUND COLORS |||||||||||||||||||||| */
+/* |||||||||||||||| BACKGROUND COLORS |||||||||||||||||| */
 .backColor {
     background: #343042;
     transition: background 150ms ease-in-out;
@@ -233,6 +233,42 @@ body::-webkit-scrollbar-thumb {
     padding: 5px;
 }
 
+.rmenu_show {
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    position: absolute;
+    background: var(--hover-item-bg);
+    padding: 2px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    /* margin: 50px auto auto 6px; */
+    left: 0;
+    bottom: 0;
+    /* translate: -50%; */
+    z-index: 9999;
+}
+
+.rmenu_show * {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    background: var(--img-bg);
+}
+
+.rmenu_show *:hover{
+    background: var(--items-bg);
+}
+
+.rmenu_hide {
+    display: none;
+}
+
 
 
 
@@ -333,6 +369,14 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     bottom: 34px;
     margin-bottom: -4px;
+}
+
+.manncostore {
+    color: #00ebfc;
+}
+
+.marketplacetf {
+    color: #00887b;
 }
 
 /* |||||||||||||||||||||| IMAGES |||||||||||||||||||||| */

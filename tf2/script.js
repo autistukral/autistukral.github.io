@@ -189,6 +189,20 @@ document.querySelector('.vishid--spy').addEventListener('click', () => {
     sniper.classList.replace('visible', 'hidden');
 });
 
+// market selection context menu
+var rmenu_class = document.querySelectorAll('.skin');
+rmenu_class.forEach(rmenu_js => rmenu_js.addEventListener('contextmenu', function (event) {
+    event.preventDefault();
+    rmenu_js.lastElementChild.classList.replace('rmenu_hide', 'rmenu_show');
+    window.addEventListener('click', function () {
+        rmenu_js.lastElementChild.classList.replace('rmenu_show', 'rmenu_hide');
+    });
+}, false));
+
+rmenu_class.forEach(rmenu_js2 => rmenu_js2.addEventListener('click', function (event) {
+
+}, false));
+
 
 
 
