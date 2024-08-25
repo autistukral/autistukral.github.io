@@ -298,9 +298,6 @@
                 <div class="answer answer2 answer3">
                     <p class="answerText" id="HDMIid"></p>
                 </div>
-                <div class="answer answer4">
-                    <p class="answerText" id="DSC"></p>
-                </div>
             </div>
             <div class="form">
                 <div class="shell">
@@ -351,9 +348,6 @@
                 </div>
                 <div class="answer answer3">
                     <p class="answerText" id="HDMIid2"></p>
-                </div>
-                <div class="answer answer4">
-                    <p class="answerText" id="DSC2"></p>
                 </div>
             </div>
         </div>
@@ -485,26 +479,6 @@
             }
             if ((result2 > 14.4) && (result2 <= 41.92)) {
                 document.getElementById('HDMIid2').innerText = hdmi21;
-            }
-
-
-            if (bitdepth == 24 && result > 0) {
-                document.getElementById('DSC').innerText = `DSC: ${((dataRate / 1000000000) / 3).toFixed(2)} Gbps`;
-            }
-            if (bitdepth == 30 && result > 0) {
-                document.getElementById('DSC').innerText = `DSC: ${((dataRate / 1000000000) / 3.75).toFixed(2)} Gbps`;
-            }
-            if (bitdepth == 36 && result > 0) {
-                document.getElementById('DSC').innerText = `DSC: ${((dataRate / 1000000000) / 4.5).toFixed(2)} Gbps`;
-            }
-            if (bitdepth2 == 24 && result2 > 0) {
-                document.getElementById('DSC2').innerText = `DSC: ${((dataRate2 / 1000000000) / 3).toFixed(2)} Gbps`;
-            }
-            if (bitdepth2 == 30 && result2 > 0) {
-                document.getElementById('DSC2').innerText = `DSC: ${((dataRate2 / 1000000000) / 3.75).toFixed(2)} Gbps`;
-            }
-            if (bitdepth2 == 36 && result2 > 0) {
-                document.getElementById('DSC2').innerText = `DSC: ${((dataRate2 / 1000000000) / 4.5).toFixed(2)} Gbps`;
             }
         }
     </script>
