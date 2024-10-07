@@ -46,6 +46,22 @@
             column-gap: 25px;
         }
 
+        .specs_sheet {
+            display: flex;
+            flex-direction: row;
+            color: #1a97eb;
+            font-size: 13px;
+            gap: 75px;
+            position: absolute;
+            top: 15svh;
+        }
+
+        .inside_columns{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
         .form {
             flex-direction: column;
             width: 300px;
@@ -158,6 +174,10 @@
             color: #e903d6;
         }
 
+        .data_speed{
+            color: #e903d6;
+        }
+
         .arrow_back img {
             width: 100%;
             filter: invert(70%);
@@ -246,6 +266,20 @@
 </head>
 
 <body>
+    <div class="specs_sheet">
+        <div class="inside_columns">
+            <div>DP 1.2 [<span class="data_speed">17.28 Gbps</span>]</div>
+            <div>DP 1.4 [<span class="data_speed">25.92 Gbps</span>]</div>
+            <div>DP 2.1 UHBR10 [<span class="data_speed">38.69 Gbps</span>]</div>
+            <div>DP 2.1 UHBR13.5 [<span class="data_speed">52.22 Gbps</span>]</div>
+            <div>DP 2.1 UHBR20 [<span class="data_speed">77.37 Gbps</span>]</div>
+        </div>
+        <div class="inside_columns">
+            <div>HDMI 1.4 [<span class="data_speed">8.16 Gbps</span>]</div>
+            <div>HDMI 2.0 [<span class="data_speed">14.4 Gbps</span>]</div>
+            <div>HDMI 2.1 [<span class="data_speed">42.6 Gbps</span>]</div>
+        </div>
+    </div>
     <div class="main">
         <div class="former">
             <div class="form">
@@ -396,9 +430,9 @@
 
             let dp12 = 'DP 1.2';
             let dp14 = 'DP 1.4';
-            let uhbr10 = 'DP 2.0 - UHBR 10';
-            let uhbr135 = 'DP 2.0 - UHBR 13.5';
-            let uhbr20 = 'DP 2.0 - UHBR 20';
+            let uhbr10 = 'DP 2.1 UHBR 10';
+            let uhbr135 = 'DP 2.1 UHBR 13.5';
+            let uhbr20 = 'DP 2.1 UHBR 20';
 
             let hmdi14 = 'HDMI 1.4';
             let hdmi20 = 'HDMI 2.0';
@@ -456,10 +490,10 @@
             }
 
 
-            if ((result <= 0) || (result > 41.92)) {
+            if ((result <= 0) || (result > 42.6)) {
                 document.getElementById('HDMIid').innerText = upsHDMI;
             }
-            if ((result2 <= 0) || (result2 > 41.92)) {
+            if ((result2 <= 0) || (result2 > 42.6)) {
                 document.getElementById('HDMIid2').innerText = upsHDMI;
             }
             if ((result > 0) && (result <= 8.16)) {
@@ -474,10 +508,10 @@
             if ((result2 > 8.16) && (result2 <= 14.4)) {
                 document.getElementById('HDMIid2').innerText = hdmi20;
             }
-            if ((result > 14.4) && (result <= 41.92)) {
+            if ((result > 14.4) && (result <= 42.6)) {
                 document.getElementById('HDMIid').innerText = hdmi21;
             }
-            if ((result2 > 14.4) && (result2 <= 41.92)) {
+            if ((result2 > 14.4) && (result2 <= 42.6)) {
                 document.getElementById('HDMIid2').innerText = hdmi21;
             }
         }
