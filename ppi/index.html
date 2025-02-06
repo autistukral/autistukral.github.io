@@ -89,7 +89,7 @@
         outline: none;
         border: none;
         border-radius: 6px;
-        padding: 4px;
+        padding: 4px 4px 2px 25px;
         text-align: center;
         background-color: #424369;
         color: #fff;
@@ -229,27 +229,52 @@
   </head>
 
   <body>
+    <datalist id="width-list">
+      <option value="1920"></option>
+      <option value="2560"></option>
+      <option value="3840"></option>
+      <option value="5120"></option>
+      <option value="7680"></option>
+    </datalist>
+    <datalist id="height-list">
+      <option value="1080"></option>
+      <option value="1440"></option>
+      <option value="2160"></option>
+      <option value="2880"></option>
+      <option value="4320"></option>
+    </datalist>
+    <datalist id="diagonal-list">
+      <option value="21.5"></option>
+      <option value="24"></option>
+      <option value="24.5"></option>
+      <option value="25"></option>
+      <option value="26.5"></option>
+      <option value="27"></option>
+      <option value="28"></option>
+      <option value="31.5"></option>
+      <option value="32"></option>
+    </datalist>
     <div class="main">
       <div class="former">
         <div class="form">
           <div class="shell">
             <div class="frst">
               <label for="">Width</label>
-              <input type="number" name="width" id="width" />
+              <input type="number" name="width" id="width" list="width-list" />
             </div>
             <div class="lbl">pixels</div>
           </div>
           <div class="shell">
             <div class="frst">
               <label for="">Height</label>
-              <input type="number" name="height" id="height" />
+              <input type="number" name="height" id="height" list="height-list" />
             </div>
             <div class="lbl">pixels</div>
           </div>
           <div class="shell">
             <div class="frst">
               <label for="">Diagonal</label>
-              <input type="number" name="diagonal" id="diagonal" />
+              <input type="number" name="diagonal" id="diagonal" list="diagonal-list" />
             </div>
             <div class="lbl">inches</div>
           </div>
@@ -265,21 +290,21 @@
           <div class="shell">
             <div class="frst">
               <label for="">Width</label>
-              <input type="number" name="width" id="width2" />
+              <input type="number" name="width" id="width2" list="width-list" />
             </div>
             <div class="lbl">pixels</div>
           </div>
           <div class="shell">
             <div class="frst">
               <label for="">Height</label>
-              <input type="number" name="height" id="height2" />
+              <input type="number" name="height" id="height2" list="height-list" />
             </div>
             <div class="lbl">pixels</div>
           </div>
           <div class="shell">
             <div class="frst">
               <label for="">Diagonal</label>
-              <input type="number" name="diagonal" id="diagonal2" />
+              <input type="number" name="diagonal" id="diagonal2" list="diagonal-list" />
             </div>
             <div class="lbl">inches</div>
           </div>
@@ -294,21 +319,21 @@
           <div class="shell">
             <div class="frst">
               <label for="">Width</label>
-              <input type="number" name="width" id="width3" />
+              <input type="number" name="width" id="width3" list="width-list" />
             </div>
             <div class="lbl">pixels</div>
           </div>
           <div class="shell">
             <div class="frst">
               <label for="">Height</label>
-              <input type="number" name="height" id="height3" />
+              <input type="number" name="height" id="height3" list="height-list" />
             </div>
             <div class="lbl">pixels</div>
           </div>
           <div class="shell">
             <div class="frst">
               <label for="">Diagonal</label>
-              <input type="number" name="diagonal" id="diagonal3" />
+              <input type="number" name="diagonal" id="diagonal3" list="diagonal-list" />
             </div>
             <div class="lbl">inches</div>
           </div>

@@ -283,26 +283,29 @@
       <div class="inside_columns">
         <div>DP 1.2 [<span class="data_speed">17.28 Gbps</span>]</div>
         <div>DP 1.4 [<span class="data_speed">25.92 Gbps</span>]</div>
-        <div>DP 2.1 UHBR10 [<span class="data_speed">38.69 Gbps</span>]</div>
-        <div>DP 2.1 UHBR13.5 [<span class="data_speed">52.22 Gbps</span>]</div>
-        <div>DP 2.1 UHBR20 [<span class="data_speed">77.37 Gbps</span>]</div>
+        <div>DP 2.1 [<span class="data_speed">38.69 Gbps UHBR10</span>]</div>
+        <div>DP 2.1 [<span class="data_speed">52.22 Gbps UHBR13.5</span>]</div>
+        <div>DP 2.1 [<span class="data_speed">77.37 Gbps UHBR20</span>]</div>
       </div>
       <div class="inside_columns">
         <div>HDMI 1.4 [<span class="data_speed">8.16 Gbps</span>]</div>
         <div>HDMI 2.0 [<span class="data_speed">14.4 Gbps</span>]</div>
         <div>HDMI 2.1 [<span class="data_speed">42.6 Gbps</span>]</div>
+        <div>HDMI 2.2 [<span class="data_speed">~85.2 Gbps Ultra96</span>]</div>
       </div>
     </div>
     <datalist id="width-list">
       <option value="1920"></option>
       <option value="2560"></option>
       <option value="3840"></option>
+      <option value="5120"></option>
       <option value="7680"></option>
     </datalist>
     <datalist id="height-list">
       <option value="1080"></option>
       <option value="1440"></option>
       <option value="2160"></option>
+      <option value="2880"></option>
       <option value="4320"></option>
     </datalist>
     <datalist id="refresh-list">
@@ -476,6 +479,7 @@
         let hmdi14 = "HDMI 1.4";
         let hdmi20 = "HDMI 2.0";
         let hdmi21 = "HDMI 2.1";
+        let hdmi22 = "HDMI 2.2 Ultra96";
 
         let upsDP = "no?";
         let upsHDMI = "no?";
@@ -528,10 +532,10 @@
           document.getElementById("DPid2").innerText = uhbr20;
         }
 
-        if (result <= 0 || result > 42.6) {
+        if (result <= 0 || result > 85.2) {
           document.getElementById("HDMIid").innerText = upsHDMI;
         }
-        if (result2 <= 0 || result2 > 42.6) {
+        if (result2 <= 0 || result2 > 85.2) {
           document.getElementById("HDMIid2").innerText = upsHDMI;
         }
         if (result > 0 && result <= 8.16) {
@@ -551,6 +555,12 @@
         }
         if (result2 > 14.4 && result2 <= 42.6) {
           document.getElementById("HDMIid2").innerText = hdmi21;
+        }
+        if (result > 42.6 && result <= 85.2) {
+          document.getElementById("HDMIid").innerText = hdmi22;
+        }
+        if (result2 > 42.6 && result2 <= 85.2) {
+          document.getElementById("HDMIid2").innerText = hdmi22;
         }
       }
     </script>
