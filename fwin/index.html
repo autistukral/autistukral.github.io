@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color=#090909">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <title>F*ck off Windows</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            font-size: 10px;
+            height: 100svh;
+            background-color: #1e2036;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .backColor {
+            background: #343042;
+            transition: background 150ms ease-in-out;
+        }
+
+        .main {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            cursor: pointer;
+            width: 400px;
+            font-size: 24px;
+            height: 60px;
+            border: none;
+            border-radius: 6px;
+            background-image: linear-gradient(45deg, #1a97eb, #e903d6, #1a97eb);
+            background-size: 200%;
+            background-position: left;
+            color: #fff;
+            scale: 1;
+            transition: all 150ms ease;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .arrow_back img {
+            width: 100%;
+            filter: invert(70%);
+        }
+
+        .arrow_back {
+            display: flex;
+            position: fixed;
+            flex-direction: column;
+            z-index: 10;
+            width: auto;
+            border-radius: 8px;
+            right: 10vw;
+            bottom: 10vh;
+            padding: 5px;
+            gap: 4px;
+        }
+
+        .arrow_top {
+            opacity: 0.75;
+            box-shadow: 0 0 3px #000;
+            width: 80px;
+            border-radius: 8px;
+            -webkit-touch-callout: none;
+        }
+
+        @media (hover: hover) {
+
+            .backColor:hover,
+            .backColor:focus {
+                background-color: #252230;
+                transition: background 150ms ease-in-out;
+            }
+
+            button:hover {
+                scale: 1.1;
+                background-position: right;
+                transition: all 250ms ease;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <button>
+            <a href="" target="_blank">
+                Download "Fuck Off Windows.zip"
+            </a>
+        </button>
+    </div>
+
+
+    <div class="arrow_back">
+        <div class="arrow_top backColor">
+            <a href="../index.html" aria-label="Go to the main page">
+                <img src="/csgoskins/img/svg/arrow-back-simple-svgrepo-com.svg" alt="" />
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
