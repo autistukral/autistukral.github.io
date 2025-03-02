@@ -310,6 +310,7 @@
     </datalist>
     <datalist id="refresh-list">
       <option value="60"></option>
+      <option value="120"></option>
       <option value="144"></option>
       <option value="240"></option>
       <option value="360"></option>
@@ -321,7 +322,16 @@
           <div class="shell">
             <div class="frst">
               <label for="">Width</label>
-              <input type="number" name="width" id="width" list="width-list" />
+              <input
+                type="number"
+                name="width"
+                id="width"
+                list="width-list"
+                onfocus="this.value=''"
+                onblur="this.value=this.dataset.value"
+                data-value=""
+                oninput="this.dataset.value=this.value"
+              />
             </div>
             <div class="lbl">pixels</div>
           </div>
@@ -333,6 +343,10 @@
                 name="height"
                 id="height"
                 list="height-list"
+                onfocus="this.value=''"
+                onblur="this.value=this.dataset.value"
+                data-value=""
+                oninput="this.dataset.value=this.value"
               />
             </div>
             <div class="lbl">pixels</div>
@@ -345,6 +359,10 @@
                 name="refresh"
                 id="refresh"
                 list="refresh-list"
+                onfocus="this.value=''"
+                onblur="this.value=this.dataset.value"
+                data-value=""
+                oninput="this.dataset.value=this.value"
               />
             </div>
             <div class="lbl">Hz</div>
@@ -374,7 +392,16 @@
           <div class="shell">
             <div class="frst">
               <label for="">Width</label>
-              <input type="number" name="width" id="width2" list="width-list" />
+              <input
+                type="number"
+                name="width"
+                id="width2"
+                list="width-list"
+                onfocus="this.value=''"
+                onblur="this.value=this.dataset.value"
+                data-value=""
+                oninput="this.dataset.value=this.value"
+              />
             </div>
             <div class="lbl">pixels</div>
           </div>
@@ -386,6 +413,10 @@
                 name="height"
                 id="height2"
                 list="height-list"
+                onfocus="this.value=''"
+                onblur="this.value=this.dataset.value"
+                data-value=""
+                oninput="this.dataset.value=this.value"
               />
             </div>
             <div class="lbl">pixels</div>
@@ -398,6 +429,10 @@
                 name="refresh"
                 id="refresh2"
                 list="refresh-list"
+                onfocus="this.value=''"
+                onblur="this.value=this.dataset.value"
+                data-value=""
+                oninput="this.dataset.value=this.value"
               />
             </div>
             <div class="lbl">Hz</div>
