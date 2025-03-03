@@ -8,6 +8,21 @@
     --dmarket: #8dd294;
 }
 
+/* ||||||||||||||||||||| JSON SAVE ||||||||||||||||||| */
+
+.saveJsonBtn {
+    position: fixed;
+    left: 25px;
+    top: 25px;
+    width: 80px;
+    height: 25px;
+    background: var(--items-bg);
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+}
+
+
 /* ||||||||||||||||||||| BASICS ||||||||||||||||||| */
 
 * {
@@ -101,6 +116,7 @@ body::-webkit-scrollbar-thumb {
 
 .ObackColor {
     background: #202020;
+    transition: background 150ms ease-in-out;
 }
 
 .backColor,
@@ -163,6 +179,10 @@ body::-webkit-scrollbar-thumb {
 .skin {
     display: flex;
     flex-direction: column;
+}
+
+.musicKit, .agents, .pass, .pin {
+    position: relative;
 }
 
 .arrow_back {
@@ -345,8 +365,6 @@ body::-webkit-scrollbar-thumb {
 .ownBtn,
 .owned,
 .deown {
-    order: 4;
-    border-radius: 0 0.75rem 0.75rem 0;
     border: 0;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -372,6 +390,27 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
     background-color: #d40000;
     background-image: url(img/ownage/close_hover.webp);
+}
+
+.skinBtn {
+    order: 4;
+    border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.musicBtn, .agentBtn, .passBtn, .pinBtn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background-size: 20px;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.musicKit:hover .musicBtn, .agents:hover .agentBtn, .pass:hover .passBtn, .pin:hover .pinBtn {
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
 }
 
 .skins:hover .wear span {
