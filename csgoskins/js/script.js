@@ -12,7 +12,7 @@ function loaded() {
 
 // page load
 window.addEventListener("DOMContentLoaded", () => {
-  //loaded();
+  loaded();
 });
 
 // temporary ownage button toggle function
