@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Warmup Routine</title>
+    <meta name="theme-color=#090909" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div class="part1 enabled" id="part1">
+        <button id="start1">Start</button>
+      </div>
+
+      <div class="part2 disabled" id="part2">
+        <div class="timeLeft">
+          <img src="img/svg/timer-svgrepo-com.svg" alt="" />
+          00:
+          <div class="timer" id="timer1">15</div>
+          s
+        </div>
+
+        <svg id="zigzagSVG" viewBox="0 0 600 400">
+          <path
+            id="zigzagPath"
+            class="zigzag-path"
+            d="M 0 0 
+            L 0 400 
+            L 150 0
+            L 150 400
+            L 300 0
+            L 300 400
+            L 450 0
+            L 450 400
+            L 600 0
+            L 600 400"
+          />
+          <circle class="ball" id="ball" />
+        </svg>
+        <div class="snButtons">
+          <button id="startBtn1" class="enabled">Start</button>
+          <button id="nextBtn1" class="disabled">Next</button>
+        </div>
+      </div>
+
+      <div class="part2 disabled" id="part2-2">
+        <div class="timeLeft">
+          <img src="img/svg/timer-svgrepo-com.svg" alt="" />
+          00:
+          <div class="timer" id="timer1-2">15</div>
+          s
+        </div>
+
+        <svg id="zigzagSVG-2" viewBox="0 0 600 400">
+          <path
+            id="zigzagPath-2"
+            class="zigzag-path-inv"
+            d="M 0 0 
+            L 0 400 
+            L 150 0
+            L 150 400
+            L 300 0
+            L 300 400
+            L 450 0
+            L 450 400
+            L 600 0
+            L 600 400"
+          />
+          <circle class="ball" id="ball-2" />
+        </svg>
+        <div class="snButtons">
+          <button id="startBtn1-2" class="enabled">Start</button>
+          <button id="nextBtn1-2" class="disabled">Next</button>
+        </div>
+      </div>
+
+      <div class="part3 disabled" id="part3">
+        <div class="timeLeft">
+          <img src="img/svg/timer-svgrepo-com.svg" alt="" />
+          00:
+          <div class="timer" id="timer2">15</div>
+          s
+        </div>
+
+        <svg id="zigzagSVG2" viewBox="0 0 600 400">
+          <path
+            id="zigzagPath2"
+            class="zigzag-path"
+            d="M 0 0
+            L 600 0
+            L 0 100
+            L 600 100
+            L 0 200
+            L 600 200
+            L 0 300
+            L 600 300
+            L 0 400
+            L 600 400"
+          ></path>
+          <circle class="ball" id="ball2" />
+        </svg>
+        <div class="snButtons">
+          <button id="startBtn2" class="enabled">Start</button>
+          <button id="nextBtn2" class="disabled">Next</button>
+        </div>
+      </div>
+
+      <div class="part3 disabled" id="part3-2">
+        <div class="timeLeft">
+          <img src="img/svg/timer-svgrepo-com.svg" alt="" />
+          00:
+          <div class="timer" id="timer2-2">15</div>
+          s
+        </div>
+
+        <svg id="zigzagSVG2-2" viewBox="0 0 600 400">
+          <path
+            id="zigzagPath2-2"
+            class="zigzag-path-inv"
+            d="M 0 0
+            L 600 0
+            L 0 100
+            L 600 100
+            L 0 200
+            L 600 200
+            L 0 300
+            L 600 300
+            L 0 400
+            L 600 400"
+          ></path>
+          <circle class="ball" id="ball2-2" />
+        </svg>
+        <div class="snButtons">
+          <button id="startBtn2-2" class="enabled">Start</button>
+          <button id="nextBtn2-2" class="disabled">Next</button>
+        </div>
+      </div>
+
+      <div class="part4 disabled" id="part4">
+        <div class="timeLeft">
+          <img src="img/svg/timer-svgrepo-com.svg" alt="" />
+          00:
+          <div class="timer" id="timer3"></div>
+          s
+        </div>
+        <svg viewBox="0 0 800 425">
+          <line class="zigzag-path" x1="0" y1="0" x2="300" y2="10" />
+          <line class="zigzag-path" x1="300" y1="10" x2="40" y2="150" />
+          <line class="zigzag-path" x1="40" y1="150" x2="10" y2="420" />
+          <line class="zigzag-path" x1="10" y1="420" x2="260" y2="200" />
+          <line class="zigzag-path" x1="260" y1="200" x2="200" y2="425" />
+          <line class="zigzag-path" x1="200" y1="425" x2="780" y2="420" />
+          <line class="zigzag-path" x1="780" y1="420" x2="750" y2="20" />
+          <line class="zigzag-path" x1="750" y1="20" x2="650" y2="250" />
+          <line class="zigzag-path" x1="650" y1="250" x2="420" y2="320" />
+          <line class="zigzag-path" x1="420" y1="320" x2="490" y2="30" />
+
+          <circle class="ball2" cx="0" cy="0" />
+          <circle class="ball2" cx="300" cy="10" />
+          <circle class="ball2" cx="40" cy="150" />
+          <circle class="ball2" cx="10" cy="420" />
+          <circle class="ball2" cx="260" cy="200" />
+          <circle class="ball2" cx="200" cy="425" />
+          <circle class="ball2" cx="780" cy="420" />
+          <circle class="ball2" cx="750" cy="20" />
+          <circle class="ball2" cx="650" cy="250" />
+          <circle class="ball2" cx="420" cy="320" />
+          <circle class="ball2" cx="490" cy="30" />
+        </svg>
+        <div class="snButtons">
+          <button id="startBtn3" class="enabled">Start</button>
+          <button id="nextBtn3" class="disabled">Next</button>
+        </div>
+      </div>
+
+      <div class="part4 disabled" id="part4-2">
+        <div class="timeLeft">
+          <img src="img/svg/timer-svgrepo-com.svg" alt="" />
+          00:
+          <div class="timer" id="timer3-2"></div>
+          s
+        </div>
+        <svg viewBox="0 0 800 425">
+          <line class="zigzag-path-inv" x1="0" y1="0" x2="300" y2="10" />
+          <line class="zigzag-path-inv" x1="300" y1="10" x2="40" y2="150" />
+          <line class="zigzag-path-inv" x1="40" y1="150" x2="10" y2="420" />
+          <line class="zigzag-path-inv" x1="10" y1="420" x2="260" y2="200" />
+          <line class="zigzag-path-inv" x1="260" y1="200" x2="200" y2="425" />
+          <line class="zigzag-path-inv" x1="200" y1="425" x2="780" y2="420" />
+          <line class="zigzag-path-inv" x1="780" y1="420" x2="750" y2="20" />
+          <line class="zigzag-path-inv" x1="750" y1="20" x2="650" y2="250" />
+          <line class="zigzag-path-inv" x1="650" y1="250" x2="420" y2="320" />
+          <line class="zigzag-path-inv" x1="420" y1="320" x2="490" y2="30" />
+
+          <circle class="ball2-2" cx="0" cy="0" />
+          <circle class="ball2-2" cx="300" cy="10" />
+          <circle class="ball2-2" cx="40" cy="150" />
+          <circle class="ball2-2" cx="10" cy="420" />
+          <circle class="ball2-2" cx="260" cy="200" />
+          <circle class="ball2-2" cx="200" cy="425" />
+          <circle class="ball2-2" cx="780" cy="420" />
+          <circle class="ball2-2" cx="750" cy="20" />
+          <circle class="ball2-2" cx="650" cy="250" />
+          <circle class="ball2-2" cx="420" cy="320" />
+          <circle class="ball2-2" cx="490" cy="30" />
+        </svg>
+        <div class="snButtons">
+          <button id="startBtn3-2" class="enabled">Start</button>
+          <button id="nextBtn3-2" class="disabled">Next</button>
+        </div>
+      </div>
+
+      <div class="part5 disabled" id="part5">
+        <div class="timeLeft">
+          <img src="img/svg/timer-svgrepo-com.svg" alt="" />
+          00:
+          <div class="timer" id="timer4"></div>
+          s
+        </div>
+
+        <div class="circle" id="circle"></div>
+
+        <div class="snButtons">
+          <button id="startBtn4" class="enabled">Start</button>
+          <button id="nextBtn4" class="disabled">Next</button>
+        </div>
+      </div>
+
+      <div class="part6 disabled" id="part6">
+        <div class="timeLeft">
+          <img src="img/svg/timer-svgrepo-com.svg" alt="" />
+          00:
+          <div class="timer" id="timer5"></div>
+          s
+        </div>
+
+        <div class="crosshair">
+          <svg viewbox="0 0 32 32">
+            <line class="cross-path" x1="0" y1="16" x2="32" y2="16" />
+            <line class="cross-path" x1="16" y1="0" x2="16" y2="32" />
+          </svg>
+        </div>
+        <div class="circle-container" id="bigassCircle"></div>
+
+        <div class="snButtons">
+          <button id="startBtn5" class="enabled">Start</button>
+          <button id="nextBtn5" class="disabled">Next</button>
+        </div>
+      </div>
+
+      <div class="part7 disabled" id="part7">
+        <div class="timeLeft">
+          <img src="img/svg/timer-svgrepo-com.svg" alt="" />
+          00:
+          <div class="timer" id="timer6">15</div>
+          s
+        </div>
+        <div class="breathe1">
+          <img src="img/breathe-in-out-r.png" alt="" />
+          <p>5x</p>
+        </div>
+        <div class="snButtons">
+          <button id="startBtn6" class="enabled">Start</button>
+          <button id="nextBtn6" class="disabled">Next</button>
+        </div>
+      </div>
+
+      <div class="part8 disabled" id="part8">
+        <div class="timeLeft">
+          <img src="img/svg/timer-svgrepo-com.svg" alt="" />
+          00:
+          <div class="timer" id="timer7">10</div>
+          s
+        </div>
+        <div class="breathe1">
+          <img src="img/hold-breath.gif" alt="" />
+          <p>10s</p>
+        </div>
+        <div class="snButtons">
+          <button id="startBtn7" class="enabled">Start</button>
+          <button id="nextBtn7" class="disabled">Next</button>
+        </div>
+      </div>
+
+      <div class="part9 disabled" id="part9">
+        <div class="timeLeft">
+          <img src="img/svg/timer-svgrepo-com.svg" alt="" />
+          00:
+          <div class="timer" id="timer8">30</div>
+          s
+        </div>
+        <div class="breathe1">
+          <img src="img/blink.gif" alt="" style="width: 300px" />
+          <p>30s</p>
+        </div>
+        <div class="snButtons">
+          <button id="startBtn8" class="enabled">Start</button>
+        </div>
+      </div>
+    </div>
+    <div class="arrow_back">
+      <div class="arrow_top">
+        <a href="../index.html" aria-label="Go to the main page">
+          <img src="img/svg/arrow-back-simple-svgrepo-com.svg" alt="" />
+        </a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
