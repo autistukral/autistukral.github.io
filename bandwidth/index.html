@@ -291,7 +291,7 @@
         <div>HDMI 1.4 [<span class="data_speed">8.16 Gbps</span>]</div>
         <div>HDMI 2.0 [<span class="data_speed">14.4 Gbps</span>]</div>
         <div>HDMI 2.1 [<span class="data_speed">42.6 Gbps</span>]</div>
-        <div>HDMI 2.2 [<span class="data_speed">~85.2 Gbps Ultra96</span>]</div>
+        <div>HDMI 2.2 [<span class="data_speed">85.25 Gbps Ultra96</span>]</div>
       </div>
     </div>
     <datalist id="width-list">
@@ -571,10 +571,10 @@
           document.getElementById("DPid2").innerText = uhbr20;
         }
 
-        if (result <= 0 || result > 85.2) {
+        if (result <= 0 || result > 85.25) {
           document.getElementById("HDMIid").innerText = upsHDMI;
         }
-        if (result2 <= 0 || result2 > 85.2) {
+        if (result2 <= 0 || result2 > 85.25) {
           document.getElementById("HDMIid2").innerText = upsHDMI;
         }
         if (result > 0 && result <= 8.16) {
@@ -595,10 +595,10 @@
         if (result2 > 14.4 && result2 <= 42.6) {
           document.getElementById("HDMIid2").innerText = hdmi21;
         }
-        if (result > 42.6 && result <= 85.2) {
+        if (result > 42.6 && result <= 85.25) {
           document.getElementById("HDMIid").innerText = hdmi22;
         }
-        if (result2 > 42.6 && result2 <= 85.2) {
+        if (result2 > 42.6 && result2 <= 85.25) {
           document.getElementById("HDMIid2").innerText = hdmi22;
         }
       }
