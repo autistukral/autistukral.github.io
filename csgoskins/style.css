@@ -361,6 +361,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .skin {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
   margin: auto;
   text-decoration: none;
   text-align: center;
