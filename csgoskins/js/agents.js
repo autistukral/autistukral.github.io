@@ -9,10 +9,11 @@ async function saveToJSONBinAGENTS() {
   items.forEach((div) => {
     const button = div.querySelector(".agentBtn");
     data.push({
+      agentId: div.id,
       colorClass: div.classList.contains("ObackColor")
         ? "ObackColor"
         : "backColor",
-      buttonClass: button.classList.contains("deown") ? "deown" : "owned",
+      buttonClass: button.classList.contains("deown") ? "deown" : "ownage",
     });
   });
 
@@ -33,7 +34,7 @@ async function loadFromJSONBinAGENTS() {
     `https://api.jsonbin.io/v3/b/${BIN_ID3}/latest`,
     {
       headers: { "X-Master-Key": API_KEY },
-    }
+    },
   );
 
   const result = await response.json();
@@ -45,7 +46,7 @@ async function loadFromJSONBinAGENTS() {
       items[index].classList.add(item.colorClass);
 
       const button = items[index].querySelector(".agentBtn");
-      button.classList.remove("owned", "deown");
+      button.classList.remove("ownage", "deown");
       button.classList.add(item.buttonClass);
     }
   });

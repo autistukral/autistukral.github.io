@@ -2,6 +2,7 @@
 :root {
   --img-bg: #1f1c27;
   --items-bg: #343042;
+  --ownage-bg: rgba(0, 0, 0, 0.5);
   /* --main-bg: #090909; */
   --main-bg: #1b162b;
   --hover-item-bg: #252230;
@@ -57,13 +58,17 @@ html {
   justify-content: center;
   background: var(--img-bg);
   z-index: 999;
-  transition: opacity 200ms, visibility 250ms;
+  transition:
+    opacity 100ms,
+    visibility 150ms;
 }
 
 .loaded {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 300ms, visibility 350ms;
+  transition:
+    opacity 200ms,
+    visibility 250ms;
 }
 
 .load::after {
@@ -115,25 +120,26 @@ body::-webkit-scrollbar-thumb {
 /* |||||||||||||||||||||| BACKGROUND COLORS |||||||||||||||||||||| */
 .backColor {
   background: var(--items-bg);
-  transition: background 150ms ease-in-out;
+  transition: background 100ms ease-in-out;
 }
 
 .ObackColor {
   background: #202020;
-  transition: background 150ms ease-in-out;
+  transition: background 100ms ease-in-out;
 }
 
 .backColor,
 .ObackColor {
   z-index: 1;
   overflow: hidden;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4),
-    inset 0 0 16px 0px rgba(103, 88, 128, 0.4);
+  box-shadow:
+    0 0 8px 0 rgba(0, 0, 0, 0.4),
+    inset 0 0 12px 0px rgba(103, 88, 128, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .favourite {
-  box-shadow: inset 0 0 24px -4px #5b31a0;
+  box-shadow: inset 0 0 20px -4px rgba(91, 49, 160, 0.9);
   border: 1px solid rgba(147, 89, 255, 0.6);
 }
 
@@ -383,7 +389,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .ownBtn,
-.owned,
+.ownage,
 .deown {
   border: 0;
   background-color: transparent;
@@ -392,11 +398,16 @@ body::-webkit-scrollbar-thumb {
   background-position: center;
 }
 
-.owned {
+.square > .ownage,
+.square > .deown {
+  background-color: var(--ownage-bg);
+}
+
+.ownage {
   background-image: url(img/ownage/check_default.webp);
 }
 
-.owned:hover {
+.ownage:hover {
   cursor: pointer;
   background-color: #00c21a;
   background-image: url(img/ownage/check_hover.webp);
@@ -428,7 +439,6 @@ body::-webkit-scrollbar-thumb {
   height: 25px;
   background-size: 20px;
   opacity: 0;
-  transition: opacity 200ms ease-in-out;
 }
 
 .musicKit:hover .musicBtn,
@@ -436,7 +446,6 @@ body::-webkit-scrollbar-thumb {
 .pass:hover .passBtn,
 .pin:hover .pinBtn {
   opacity: 1;
-  transition: opacity 200ms ease-in-out;
 }
 
 .skins:hover .wear span {
@@ -727,7 +736,7 @@ body::-webkit-scrollbar-thumb {
   .backColor:hover,
   .backColor:focus {
     background-color: var(--hover-item-bg);
-    transition: background 150ms ease-in-out;
+    transition: background 50ms ease-in-out;
   }
 
   .skins img:hover {

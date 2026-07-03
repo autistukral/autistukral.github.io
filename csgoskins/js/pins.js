@@ -12,7 +12,7 @@ async function saveToJSONBinPIN() {
       colorClass: div.classList.contains("ObackColor")
         ? "ObackColor"
         : "backColor",
-      buttonClass: button.classList.contains("deown") ? "deown" : "owned",
+      buttonClass: button.classList.contains("deown") ? "deown" : "ownage",
     });
   });
 
@@ -45,7 +45,7 @@ async function loadFromJSONBinPIN() {
       items[index].classList.add(item.colorClass);
 
       const button = items[index].querySelector(".pinBtn");
-      button.classList.remove("owned", "deown");
+      button.classList.remove("ownage", "deown");
       button.classList.add(item.buttonClass);
     }
   });

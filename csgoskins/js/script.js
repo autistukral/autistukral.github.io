@@ -22,14 +22,14 @@ document.querySelectorAll(".ownBtn").forEach((ownButton) =>
     const Pskins = ownButton.parentElement;
     const isDeown = ownButton.classList.contains("deown");
     ownButton.classList.replace(
-      isDeown ? "deown" : "owned",
-      isDeown ? "owned" : "deown"
+      isDeown ? "deown" : "ownage",
+      isDeown ? "ownage" : "deown",
     );
     Pskins.classList.replace(
       isDeown ? "ObackColor" : "backColor",
-      isDeown ? "backColor" : "ObackColor"
+      isDeown ? "backColor" : "ObackColor",
     );
-  })
+  }),
 );
 
 // stop scrolling vars
@@ -56,7 +56,7 @@ try {
       get: function () {
         supportsPassive = true;
       },
-    })
+    }),
   );
 } catch (e) {}
 
@@ -92,14 +92,14 @@ document.querySelectorAll(".skins_img").forEach((imgButton) =>
       imgButton.onload(
         setTimeout(() => {
           loaded();
-        }, 150)
+        }, 150),
       );
     } else {
       imgButton.classList.replace("img_zoomed", "img_normal");
       enableScroll();
       imgButton.src = imgButton.src.replace("high_", "low_");
     }
-  })
+  }),
 );
 
 // next section arrow
@@ -216,10 +216,10 @@ rmenu_class.forEach((rmenu_js) =>
         rmenu_js.lastElementChild.classList.replace("rmenu_show", "rmenu_hide");
       });
     },
-    false
-  )
+    false,
+  ),
 );
 
 rmenu_class.forEach((rmenu_js2) =>
-  rmenu_js2.addEventListener("click", function (event) {}, false)
+  rmenu_js2.addEventListener("click", function (event) {}, false),
 );

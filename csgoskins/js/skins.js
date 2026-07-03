@@ -13,7 +13,7 @@ async function saveToJSONBinSKINS() {
       colorClass: div.classList.contains("ObackColor")
         ? "ObackColor"
         : "backColor",
-      buttonClass: button.classList.contains("deown") ? "deown" : "owned",
+      buttonClass: button.classList.contains("deown") ? "deown" : "ownage",
     });
   });
 
@@ -43,7 +43,7 @@ async function loadFromJSONBinSKINS() {
       items[index].classList.add(item.colorClass);
 
       const button = items[index].querySelector(".skinBtn");
-      button.classList.remove("owned", "deown");
+      button.classList.remove("ownage", "deown");
       button.classList.add(item.buttonClass);
     }
   });
