@@ -409,7 +409,7 @@ body::-webkit-scrollbar-thumb {
 
 .ownage:hover {
   cursor: pointer;
-  background-color: #00c21a;
+  background-color: #498f3e;
   background-image: url(img/ownage/check_hover.webp);
 }
 
@@ -419,7 +419,7 @@ body::-webkit-scrollbar-thumb {
 
 .deown:hover {
   cursor: pointer;
-  background-color: #d40000;
+  background-color: #8b3c3c;
   background-image: url(img/ownage/close_hover.webp);
 }
 
