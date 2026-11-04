@@ -87,13 +87,9 @@ document.querySelectorAll(".skins_img").forEach((imgButton) =>
       setTimeout(() => {
         imgButton.classList.replace("img_normal", "img_zoomed");
         imgButton.src = imgButton.src.replace("low_", "high_");
-      }, 150);
+      }, 0);
       disableScroll();
-      imgButton.onload(
-        setTimeout(() => {
-          loaded();
-        }, 150),
-      );
+      loaded();
     } else {
       imgButton.classList.replace("img_zoomed", "img_normal");
       enableScroll();
